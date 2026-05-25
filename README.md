@@ -4,6 +4,8 @@
 
 This project implements an automated **financial news sentiment scoring system** for Alibaba Group (9988.HK) using Google Gemini LLM with few-shot prompting. The system rates news articles on a 1–5 scale and evaluates whether sentiment scores predict next-day stock excess returns.
 
+`Work.md` is included as a companion document that summarizes the project development process, dataset construction, and how the final delivered package was formed.
+
 ### Key Results
 
 | Metric | Value |
@@ -21,6 +23,7 @@ This project implements an automated **financial news sentiment scoring system**
 ```
 Alibaba_Sentiment_LLM/
 ├── README.md                          ← This file
+├── Work.md                            ← Development summary and workflow overview
 ├── LLM_Sentiment_Rating_Fixed.ipynb   ← Main pipeline (train/test + signal analysis)
 ├── LLM_200_Gold_Evaluation.ipynb      ← External validation on 200-article dataset
 ├── Approach3_Embedding_Regression.ipynb ← Comparison: text embedding approach
