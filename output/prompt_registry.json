@@ -1,0 +1,292 @@
+{
+  "prompts": {
+    "VFS_2per": {
+      "desc": "Few-shot 2 per class",
+      "train_metrics": {
+        "exact": 0.7,
+        "adj": 0.9667,
+        "mae": 0.3333,
+        "rho": 0.7047,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": null,
+      "run_time": "imported_from_existing_csv"
+    },
+    "VFS_3per": {
+      "desc": "Few-shot 3 per class",
+      "train_metrics": {
+        "exact": 0.6333,
+        "adj": 0.9667,
+        "mae": 0.4,
+        "rho": 0.6664,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": null,
+      "run_time": "imported_from_existing_csv"
+    },
+    "VFS_CoT": {
+      "desc": "Few-shot 2 per class + CoT",
+      "train_metrics": {
+        "exact": 0.7333,
+        "adj": 0.9667,
+        "mae": 0.3,
+        "rho": 0.7376,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": {
+        "exact": 0.6286,
+        "adj": 0.9714,
+        "mae": 0.4,
+        "rho": 0.7035,
+        "n": 35,
+        "total": 35
+      },
+      "run_time": "imported_from_existing_csv"
+    },
+    "VFS_Boundary": {
+      "desc": "Few-shot 2/class + explicit boundary rules (data-driven)",
+      "train_metrics": {
+        "exact": 0.6667,
+        "adj": 0.9667,
+        "mae": 0.3667,
+        "rho": 0.6328,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": null,
+      "run_time": "2026-05-14T23:53:42.948573"
+    },
+    "VFS_Select": {
+      "desc": "Boundary-aware selection + focused 3/4 rule + CoT",
+      "train_metrics": {
+        "exact": 0.6667,
+        "adj": 0.9667,
+        "mae": 0.3667,
+        "rho": 0.5817,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": null,
+      "run_time": "2026-05-15T00:13:37.881336"
+    },
+    "VFS_SmartBody": {
+      "desc": "Smart body extraction + 2/class + CoT",
+      "train_metrics": {
+        "exact": 0.6667,
+        "adj": 0.9333,
+        "mae": 0.4,
+        "rho": 0.6286,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": null,
+      "run_time": "2026-05-15T00:28:26.470826"
+    },
+    "VFS_Flash": {
+      "desc": "VFS_CoT prompt + gemini-2.5-flash model",
+      "train_metrics": {
+        "exact": 0.5,
+        "adj": 0.9667,
+        "mae": 0.5333,
+        "rho": NaN,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": null,
+      "run_time": "2026-05-15T00:34:06.860589"
+    },
+    "VFS_TwoStep": {
+      "desc": "Explicit 2-step: relevance check + catalyst check",
+      "train_metrics": {
+        "exact": 0.7667,
+        "adj": 0.9667,
+        "mae": 0.2667,
+        "rho": 0.6831,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": {
+        "exact": 0.6,
+        "adj": 0.9714,
+        "mae": 0.4286,
+        "rho": 0.6187,
+        "n": 35,
+        "total": 35
+      },
+      "run_time": "2026-05-15T00:40:05.344797"
+    },
+    "VFS_Hybrid": {
+      "desc": "Hybrid: separate neg-signal + pos-signal checks before defaulting to 3",
+      "train_metrics": {
+        "exact": 0.5,
+        "adj": 0.9667,
+        "mae": 0.5333,
+        "rho": 0.5607,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": null,
+      "run_time": "2026-05-15T00:51:02.372362"
+    },
+    "VFS_Refine34": {
+      "desc": "Two-pass: VFS_CoT base + focused 3-vs-4 refine for pred∈{3,4}",
+      "train_metrics": {
+        "exact": 0.6,
+        "adj": 0.9667,
+        "mae": 0.4333,
+        "rho": 0.613,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": {
+        "exact": 0.6,
+        "adj": 0.9429,
+        "mae": 0.4571,
+        "rho": 0.666,
+        "n": 35,
+        "total": 35
+      },
+      "run_time": "2026-05-15T00:54:53.605059"
+    },
+    "VFS_Analyst": {
+      "desc": "Financial analyst framing: would this appear in an Alibaba research note?",
+      "train_metrics": {
+        "exact": 0.6667,
+        "adj": 0.9667,
+        "mae": 0.3667,
+        "rho": 0.6791,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": {
+        "exact": 0.6857,
+        "adj": 1.0,
+        "mae": 0.3143,
+        "rho": 0.7541,
+        "n": 35,
+        "total": 35
+      },
+      "run_time": "2026-05-15T01:00:16.060313"
+    },
+    "VFS_Analyst_v2": {
+      "desc": "Analyst framing v2: inclusive Type B positives + broader score 2 coverage",
+      "train_metrics": {
+        "exact": 0.5333,
+        "adj": 0.9333,
+        "mae": 0.5333,
+        "rho": 0.5691,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": {
+        "exact": 0.6571,
+        "adj": 1.0,
+        "mae": 0.3429,
+        "rho": 0.7661,
+        "n": 35,
+        "total": 35
+      },
+      "run_time": "2026-05-15T01:07:48.349052"
+    },
+    "VFS_Analyst_v3": {
+      "desc": "Analyst v3: broad 2/4 detection + explicit score-3 anchor to prevent over-classification",
+      "train_metrics": {
+        "exact": 0.7333,
+        "adj": 0.9667,
+        "mae": 0.3,
+        "rho": 0.7376,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": {
+        "exact": 0.7143,
+        "adj": 1.0,
+        "mae": 0.2857,
+        "rho": 0.808,
+        "n": 35,
+        "total": 35
+      },
+      "run_time": "2026-05-15T01:13:25.745644"
+    },
+    "VFS_Analyst_v4": {
+      "desc": "Analyst v4: tighten score-2 (needs specific Alibaba harm) + maintain broad score-4",
+      "train_metrics": {
+        "exact": 0.7667,
+        "adj": 0.9667,
+        "mae": 0.2667,
+        "rho": 0.6835,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": {
+        "exact": 0.6571,
+        "adj": 1.0,
+        "mae": 0.3429,
+        "rho": 0.7525,
+        "n": 35,
+        "total": 35
+      },
+      "run_time": "2026-05-15T01:18:36.616939"
+    },
+    "VFS_Analyst_v5": {
+      "desc": "Analyst v5: domain-calibrated — platform regulation=2, AI infra/CN-AI-milestones=4, general macro=3",
+      "train_metrics": {
+        "exact": 0.7,
+        "adj": 0.9667,
+        "mae": 0.3333,
+        "rho": 0.6927,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": {
+        "exact": 0.7143,
+        "adj": 1.0,
+        "mae": 0.2857,
+        "rho": 0.7859,
+        "n": 35,
+        "total": 35
+      },
+      "run_time": "2026-05-15T01:24:53.389434"
+    },
+    "VFS_Analyst_v6": {
+      "desc": "Analyst v6: v5 score-2/3 calibration + v3 score-4 breadth + roundup exception + CN-AI rule",
+      "train_metrics": {
+        "exact": 0.6667,
+        "adj": 0.9667,
+        "mae": 0.3667,
+        "rho": 0.6951,
+        "n": 30,
+        "total": 30
+      },
+      "val_metrics": {
+        "exact": 0.8286,
+        "adj": 1.0,
+        "mae": 0.1714,
+        "rho": 0.8877,
+        "n": 35,
+        "total": 35
+      },
+      "run_time": "2026-05-15T01:32:24.768304",
+      "test_metrics": {
+        "exact": 0.8611,
+        "adj": 1.0,
+        "mae": 0.1389,
+        "rho": 0.9042,
+        "n": 36,
+        "total": 36
+      },
+      "train_metrics_full": {
+        "exact": 0.6857,
+        "adj": 0.981,
+        "mae": 0.3333,
+        "rho": 0.6885,
+        "n": 105,
+        "total": 105
+      }
+    }
+  },
+  "best_prompt": "VFS_Analyst_v6"
+}

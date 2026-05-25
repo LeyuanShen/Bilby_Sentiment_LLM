@@ -1,0 +1,86 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "results": [
+    {
+      "horizon": "T+1",
+      "variant": "Raw Embedding",
+      "model": "all-MiniLM-L6-v2",
+      "rho": -0.15492514146625072,
+      "pval": 9.23936515121372e-51,
+      "mae": 0.01727247813888727,
+      "n_oos": 9245
+    },
+    {
+      "horizon": "T+1",
+      "variant": "PCA-50",
+      "model": "all-MiniLM-L6-v2",
+      "rho": -0.19466092376072586,
+      "pval": 1.2463606134150543e-79,
+      "mae": 0.017382920283364182,
+      "n_oos": 9245
+    },
+    {
+      "horizon": "T+3",
+      "variant": "Raw Embedding",
+      "model": "all-MiniLM-L6-v2",
+      "rho": 0.01667192704317868,
+      "pval": 0.10991524339462516,
+      "mae": 0.01997110530701458,
+      "n_oos": 9195
+    },
+    {
+      "horizon": "T+3",
+      "variant": "PCA-50",
+      "model": "all-MiniLM-L6-v2",
+      "rho": 0.017368763926881883,
+      "pval": 0.09583303304215424,
+      "mae": 0.0197863032017246,
+      "n_oos": 9195
+    },
+    {
+      "horizon": "T+5",
+      "variant": "Raw Embedding",
+      "model": "all-MiniLM-L6-v2",
+      "rho": -0.1040598835699328,
+      "pval": 1.7710531249883897e-23,
+      "mae": 0.01526660739879048,
+      "n_oos": 9160
+    },
+    {
+      "horizon": "T+5",
+      "variant": "PCA-50",
+      "model": "all-MiniLM-L6-v2",
+      "rho": -0.08609584434256551,
+      "pval": 1.5285080265719867e-16,
+      "mae": 0.01507805691434881,
+      "n_oos": 9160
+    },
+    {
+      "horizon": "T+1",
+      "variant": "Daily Aggregated",
+      "model": "all-MiniLM-L6-v2",
+      "rho": 0.02935047344164588,
+      "pval": 0.6650502458899388,
+      "mae": 0.017019070169886744,
+      "n_oos": 220
+    },
+    {
+      "horizon": "T+3",
+      "variant": "Daily Aggregated",
+      "model": "all-MiniLM-L6-v2",
+      "rho": -0.10034758078209,
+      "pval": 0.13789818542693963,
+      "mae": 0.015892547226201547,
+      "n_oos": 220
+    },
+    {
+      "horizon": "T+5",
+      "variant": "Daily Aggregated",
+      "model": "all-MiniLM-L6-v2",
+      "rho": -0.04117963964214586,
+      "pval": 0.5434720155672923,
+      "mae": 0.01609171885742959,
+      "n_oos": 220
+    }
+  ]
+}
