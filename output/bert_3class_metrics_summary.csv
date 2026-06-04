@@ -1,0 +1,2 @@
+﻿model,task,label_definition,train_size,validation_size,test_size,accuracy,macro_f1,weighted_f1,mae
+distilbert-base-uncased,3-class sentiment classification,"1/2→2 negative, 3→3 neutral, 4/5→4 positive",225,75,76,0.7631578947368421,0.6371705963938973,0.7422330097087378,0.27631578947368424

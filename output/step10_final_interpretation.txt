@@ -1,0 +1,61 @@
+
+Step10 Final Horizontal Comparison
+==================================
+
+Target variable:
+- abret_21d
+
+Compared Methods
+----------------
+1. Human sentiment score → 21-day abnormal return
+2. BERT predicted sentiment → 21-day abnormal return
+3. End-to-end BERT regression: news text → 21-day abnormal return
+
+Main Findings
+-------------
+
+1. Human sentiment score shows only weak explanatory power.
+   - Pearson r = 0.0866
+   - Pearson p-value = 0.1097
+   - OLS beta = 0.0066
+   - OLS p-value = 0.1097
+
+   Interpretation:
+   Human sentiment is positively related to future 21-day abnormal return,
+   but the relationship is not statistically significant.
+
+2. BERT-predicted sentiment shows stronger explanatory power.
+   - Pearson r = 0.1520
+   - Pearson p-value = 0.0048
+   - OLS beta = 0.0154
+   - OLS p-value = 0.0048
+
+   Interpretation:
+   BERT-predicted sentiment has a stronger and statistically significant
+   relationship with 21-day abnormal return.
+
+3. End-to-end BERT return regression is less stable.
+   - Pearson r = 0.2213
+   - Pearson p-value = 0.0677
+   - RMSE = 0.0864
+   - MAE = 0.0835
+   - Directional accuracy = 0.1159
+
+   Compared with the mean-return baseline:
+   - BERT end-to-end RMSE = 0.0864
+   - Baseline RMSE = 0.0790
+   - BERT end-to-end MAE = 0.0835
+   - Baseline MAE = 0.0762
+   - BERT end-to-end directional accuracy = 0.1159
+   - Baseline directional accuracy = 0.1159
+
+Overall Conclusion
+------------------
+The results suggest that news text contains some investment-relevant information,
+but this information is better captured through a sentiment-based intermediate representation
+than through direct end-to-end return regression.
+
+Among the tested approaches, BERT-predicted sentiment provides the strongest evidence
+of return relevance for 21-day abnormal returns. Human sentiment shows a weaker positive
+relationship, while direct end-to-end BERT return prediction does not clearly outperform
+the mean-return baseline.
